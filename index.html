@@ -174,32 +174,26 @@
             font-style: italic;
         }
 
-        /* Tata letak untuk 2 video berdampingan */
+        /* Tata letak video agar bulat sempurna */
+        .media-container {
+            text-align: center;
+            margin-bottom: 1.25rem;
+        }
+
         .media-duo {
             display: flex;
-            gap: 1rem;
+            justify-content: center;
+            gap: 1.5rem;
             margin-bottom: 1.25rem;
         }
 
-        .media-duo video {
-            width: 50%;
-            height: 180px;
+        .media-duo video, .media-solo video {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
             object-fit: cover;
-            border-radius: 8px;
-            border: 2px solid var(--border);
-        }
-
-        /* Tata letak khusus untuk 1 video tunggal */
-        .media-solo {
-            margin-bottom: 1.25rem;
-        }
-
-        .media-solo video {
-            width: 100%;
-            height: 220px;
-            object-fit: cover;
-            border-radius: 8px;
-            border: 2px solid var(--border);
+            border: 4px solid var(--primary-light);
+            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
         }
 
         /* Tata letak khusus foto proyek dengan efek animasi transisi halus */
@@ -239,6 +233,19 @@
             font-weight: 500;
         }
 
+        /* Styling tautan di bagian kontak */
+        .contact-links a {
+            color: var(--primary-light);
+            text-decoration: none;
+            font-weight: 600;
+            transition: color 0.2s;
+        }
+
+        .contact-links a:hover {
+            color: var(--primary);
+            text-decoration: underline;
+        }
+
         ul {
             padding-left: 1.2rem;
             color: var(--text-light);
@@ -268,14 +275,11 @@
                 padding: 1.5rem;
             }
             .media-duo {
-                flex-direction: column;
+                gap: 1rem;
             }
-            .media-duo video {
-                width: 100%;
-                height: 200px;
-            }
-            .media-solo video {
-                height: 200px;
+            .media-duo video, .media-solo video {
+                width: 120px;
+                height: 120px;
             }
             .project-img {
                 height: 200px;
@@ -305,12 +309,12 @@
             <div class="profile-container">
                 <video src="profil- animasi.mp4" class="profile-media" autoplay muted loop playsinline></video>
             </div>
-            <h1 style="text-align: center;">Profile </h1>
+            <h1 style="text-align: center;">Profile</h1>
             <p class="subtitle" style="text-align: center;">Chemical, Lean, Inventory Control, Industrial Engineer, Construction, Construction Design, Freelance Procurement/Purchasing, Design Graphic/Visual, Writer, Assistant</p>
             <div class="contact-info" style="justify-content: center;">
                 <span>📍 Kab. Garut, Indonesia</span>
-                <span>📧 agungkurniansyah39@gmail.com</span>
-                <span>📱 0851-2365-7385</span>
+                <span>📧 <a href="mailto:agungkurniansyah39@gmail.com">agungkurniansyah39@gmail.com</a></span>
+                <span>📱 <a href="https://wa.me/6285123657385" target="_blank">0851-2365-7385</a></span>
             </div>
             <p style="text-align: center;">Profesional berpengalaman di bidang analisis laboratorium, teknik industri, dan technical support engineering dengan rekam jejak kuat dalam pemeliharaan instrumen, manajemen proyek, serta peningkatan efisiensi operasional.</p>
         </section>
@@ -355,8 +359,8 @@
             
             <div class="experience-item">
                 <h3>R&D Laboratorium Analysis</h3>
-                <p class="meta">Supervisor R&D Laboratorium Analysis - PT Guardian Pharmatama (2022-2023) dan Analyst Andev PT Kalbe Farma(2015-2019) & PT Lucas Djaja (2019)</p>
-                <div class="media-solo">
+                <p class="meta">Supervisor R&D Laboratorium Analysis - PT Guardian Pharmatama (2022-2023) dan Analyst Andev PT Kalbe Farma (2015-2019) & PT Lucas Djaja (2019)</p>
+                <div class="media-solo media-container">
                     <video src="exp-lab1.mp4" autoplay muted loop playsinline></video>
                 </div>
                 <ul>
@@ -368,7 +372,7 @@
 
             <div class="experience-item">
                 <h3>Technical Support / Service Engineer (CSE)</h3>
-                <p class="meta">PT Adhya Waris Saintifik (2025), PT Mikatasa Agung (2024), PT Konishi Lemindo(2019-2021)</p>
+                <p class="meta">PT Adhya Waris Saintifik (2025), PT Mikatasa Agung (2024), PT Konishi Lemindo (2019-2021)</p>
                 <div class="media-duo">
                     <video src="exp-support1.mp4" autoplay muted loop playsinline></video>
                     <video src="exp-support2.mp4" autoplay muted loop playsinline></video>
@@ -407,7 +411,7 @@
             <div class="experience-item">
                 <h3>Procurement/Purchasing, Inventory Control, Construction, Construct Design, Graphic Design, Visual & Writer</h3>
                 <p class="meta">Freelance (2025 - 2026)</p>
-                <div class="media-solo">
+                <div class="media-solo media-container">
                     <video src="exp-free1.mp4" autoplay muted loop playsinline></video>
                 </div>
                 <ul>
@@ -484,14 +488,14 @@
             </div>
         </section>
 
-        <!-- Kontak -->
+        <!-- Kontak (Mari Terhubung) -->
         <section id="contact">
             <h2>Mari Terhubung</h2>
             <p>Tertarik untuk berkolaborasi atau mendiskusikan peluang profesional? Silakan hubungi melalui:</p>
-            <ul style="list-style: none; padding: 0; margin-top: 1rem;">
-                <li>📞 <strong>Telepon/WhatsApp:</strong> 0851-2365-7385</li>
-                <li>📧 <strong>Email:</strong> agungkurniansyah39@gmail.com</li>
-                <li>💼 <strong>LinkedIn:</strong> linkedin.com/in/agungkurniansyah39/</li>
+            <ul class="contact-links" style="list-style: none; padding: 0; margin-top: 1rem;">
+                <li>📞 <strong>Telepon/WhatsApp:</strong> <a href="https://wa.me/6285123657385" target="_blank">0851-2365-7385</a></li>
+                <li>📧 <strong>Email:</strong> <a href="mailto:agungkurniansyah39@gmail.com">agungkurniansyah39@gmail.com</a></li>
+                <li>💼 <strong>LinkedIn:</strong> <a href="https://linkedin.com/in/agungkurniansyah39/" target="_blank">linkedin.com/in/agungkurniansyah39/</a></li>
             </ul>
         </section>
     </div>
