@@ -222,6 +222,23 @@
             transform: scale(1.03);
         }
 
+        /* Daftar Sertifikat / Kursus */
+        .cert-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 1rem;
+        }
+
+        .cert-card {
+            background-color: var(--bg-color);
+            padding: 1rem 1.25rem;
+            border-radius: 8px;
+            border-left: 4px solid var(--primary-light);
+            font-size: 0.95rem;
+            color: var(--text-dark);
+            font-weight: 500;
+        }
+
         ul {
             padding-left: 1.2rem;
             color: var(--text-light);
@@ -270,12 +287,13 @@
 
     <header>
         <div class="nav-container">
-            <div class="logo">Portofolio Agung Kurniansyah</div>
+            <div class="logo">Agung Kurniansyah</div>
             <nav>
                 <a href="#about">Tentang</a>
                 <a href="#skills">Keahlian</a>
                 <a href="#experience">Pengalaman</a>
                 <a href="#projects">Proyek</a>
+                <a href="#certificates">Sertifikat</a>
                 <a href="#contact">Kontak</a>
             </nav>
         </div>
@@ -288,13 +306,13 @@
                 <video src="profil- animasi.mp4" class="profile-media" autoplay muted loop playsinline></video>
             </div>
             <h1 style="text-align: center;">Agung Kurniansyah</h1>
-            <p class="subtitle" style="text-align: center;">Chemical / Industrial Engineer, Construction, Construction Design, Analyst, Design Graphic/Visual, Freelance Procurement/Purchasing, Writer</p>
+            <p class="subtitle" style="text-align: center;">Chemical / Industrial Engineer, Design Graphic/Visual, Writer, Assistant</p>
             <div class="contact-info" style="justify-content: center;">
                 <span>📍 Kab. Garut, Indonesia</span>
                 <span>📧 agungkurniansyah39@gmail.com</span>
                 <span>📱 0851-2365-7385</span>
             </div>
-            <p style="text-align: center;">Profesional berpengalaman di bidang analisis laboratorium, teknik industri, dan technical support engineering dengan rekam jejak kuat dalam pemeliharaan instrumen, manajemen proyek, serta peningkatan efisiensi operasional</p>
+            <p style="text-align: center;">Profesional berpengalaman di bidang analisis laboratorium, teknik industri, dan technical support engineering dengan rekam jejak kuat dalam pemeliharaan instrumen, manajemen proyek, serta peningkatan efisiensi operasional.</p>
         </section>
 
         <!-- Keahlian -->
@@ -335,10 +353,9 @@
         <section id="experience">
             <h2>Pengalaman Kerja Profesional</h2>
             
-            <!-- Supervisor R&D (1 Video Saja) -->
             <div class="experience-item">
                 <h3>Supervisor R&D Laboratorium Analysis - PT Guardian Pharmatama & PT Kalbe Farma</h3>
-                <p class="meta">Juni 2022 - Desember 2023.</p>
+                <p class="meta">Juni 2022 - Desember 2023</p>
                 <div class="media-solo">
                     <video src="exp-lab1.mp4" autoplay muted loop playsinline></video>
                 </div>
@@ -349,7 +366,6 @@
                 </ul>
             </div>
 
-            <!-- Technical Support / CSE (Tetap 2 Video) -->produk.</li>
             <div class="experience-item">
                 <h3>Technical Support / Service Engineer (CSE)</h3>
                 <p class="meta">PT Adhya Waris Saintifik, PT Mikatasa Agung, PT Konishi Lemindo</p>
@@ -360,11 +376,10 @@
                 <ul>
                     <li>Melakukan perawatan, perbaikan, dan kalibrasi instrumen analitis untuk meminimalkan downtime.</li>
                     <li>Memberikan konsultasi teknis produk dan penanganan masalah pengguna.</li>
-                    <li>Mencapai tingkat penyelesaian uji coba (*trial*) tinggi untuk mendorong penjualan 
+                    <li>Mencapai tingkat penyelesaian uji coba (trial) tinggi untuk mendorong penjualan produk.</li>
                 </ul>
             </div>
 
-            <!-- Assistant Operations (Tetap 2 Video) -->
             <div class="experience-item">
                 <h3>Assistant Operations, Financial & Customer Relationship</h3>
                 <p class="meta">PT MAS (TACO HPL) & Private Hospitality Ventures (2026)</p>
@@ -379,7 +394,6 @@
                 </ul>
             </div>
 
-            <!-- Freelance Design (1 Video Saja) -->
             <div class="experience-item">
                 <h3>Construct Design, Graphic Design, Visual & Writer (Freelance)</h3>
                 <p class="meta">September 2025 - Desember 2025</p>
@@ -393,7 +407,7 @@
             </div>
         </section>
 
-        <!-- Portofolio Proyek (Foto dengan Animasi Transisi) -->
+        <!-- Portofolio Proyek -->
         <section id="projects">
             <h2>Portofolio Proyek Terpilih</h2>
             
@@ -401,7 +415,7 @@
                 <h3>Project 01: Perumahan Taman Bukit Alam (Main Gate Design)</h3>
                 <p class="meta">Lokasi: Samarang, Garut | Software: SketchUp, AutoCAD</p>
                 <div class="project-img-container">
-                    <img src="project1-img.jpeg" alt="Proyek Gerbang Perumahan" class="project-img">
+                    <img src="project1-img.png" alt="Proyek Gerbang Perumahan" class="project-img">
                 </div>
                 <ul>
                     <li>Perancangan desain eksterior gerbang utama kompleks perumahan dengan gaya Modern Contemporary.</li>
@@ -411,7 +425,7 @@
 
             <div class="project-item">
                 <h3>Project 02: Mr. Z's Private Residence Design</h3>
-                <p class="meta">Lokasi: Wanaraja, Garut | Software: AutoCAD & SketchUp[span_27](start_span)[span_27](end_span)</p>
+                <p class="meta">Lokasi: Wanaraja, Garut | Software: AutoCAD & SketchUp</p>
                 <div class="project-img-container">
                     <img src="project2-img.png" alt="Proyek Rumah Tinggal" class="project-img">
                 </div>
@@ -425,12 +439,27 @@
                 <h3>Project 03: Nature Sip Cold Pressed Juice (Branding)</h3>
                 <p class="meta">Jenis Proyek: Desain Poster Digital & Materi Media Sosial</p>
                 <div class="project-img-container">
-                    <img src="project3-img.jpeg" alt="Proyek Branding Produk" class="project-img">
+                    <img src="project3-img.png" alt="Proyek Branding Produk" class="project-img">
                 </div>
                 <ul>
                     <li>Merancang materi promosi produk cold-pressed juice dengan klaim kesehatan (100% Fresh, No Add Sugar & Water).</li>
                     <li>Mengembangkan konsep visual sketsa monokrom bahan alami dengan botol produk sebagai titik fokus.</li>
                 </ul>
+            </div>
+        </section>
+
+        <!-- Kursus, Pelatihan & Sertifikat -->
+        <section id="certificates">
+            <h2>Kursus & Sertifikasi</h2>
+            <div class="cert-grid">
+                <div class="cert-card">GMP & CPOB / GLP Lab Safety</div>
+                <div class="cert-card">Project Management Associate & Fundamentals</div>
+                <div class="cert-card">Supply Chain Associate & Inventory Management</div>
+                <div class="cert-card">Pengendalian Dokumen & Data Integrity</div>
+                <div class="cert-card">Six Sigma Yellow Belt</div>
+                <div class="cert-card">Data Analytics & Science Methodology</div>
+                <div class="cert-card">SAP Business One: Production & Logistic</div>
+                <div class="cert-card">Microsoft Office Specialist: Excel Expert</div>
             </div>
         </section>
 
