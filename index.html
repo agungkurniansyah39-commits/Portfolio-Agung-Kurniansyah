@@ -196,7 +196,7 @@
             box-shadow: 0 4px 10px rgba(0,0,0,0.1);
         }
 
-        /* Tata letak khusus foto proyek dengan efek animasi transisi halus */
+        /* Tata letak khusus foto proyek tunggal dengan efek animasi transisi halus */
         .project-img-container {
             margin-bottom: 1.25rem;
             overflow: hidden;
@@ -213,6 +213,32 @@
         }
 
         .project-img:hover {
+            transform: scale(1.03);
+        }
+
+        /* Tata letak khusus untuk 2 foto proyek berdampingan */
+        .project-img-duo {
+            display: flex;
+            gap: 1rem;
+            margin-bottom: 1.25rem;
+        }
+
+        .project-img-duo div {
+            width: 50%;
+            overflow: hidden;
+            border-radius: 8px;
+            border: 2px solid var(--border);
+        }
+
+        .project-img-duo img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            display: block;
+            transition: transform 0.5s ease;
+        }
+
+        .project-img-duo img:hover {
             transform: scale(1.03);
         }
 
@@ -284,6 +310,15 @@
             .project-img {
                 height: 200px;
             }
+            .project-img-duo {
+                flex-direction: column;
+            }
+            .project-img-duo div {
+                width: 100%;
+            }
+            .project-img-duo img {
+                height: 180px;
+            }
         }
     </style>
 </head>
@@ -304,7 +339,7 @@
     </header>
 
     <div class="container">
-        <!-- Tentang Saya -->
+        <!-- Tentang Saya & Storytelling Perjalanan Karier -->
         <section id="about">
             <div class="profile-container">
                 <video src="profil- animasi.mp4" class="profile-media" autoplay muted loop playsinline></video>
@@ -316,7 +351,17 @@
                 <span>📧 <a href="mailto:agungkurniansyah39@gmail.com">agungkurniansyah39@gmail.com</a></span>
                 <span>📱 <a href="https://wa.me/6285123657385" target="_blank">0851-2365-7385</a></span>
             </div>
-            <p style="text-align: center;">Profesional berpengalaman di bidang analisis laboratorium, teknik industri, dan technical support engineering dengan rekam jejak kuat dalam pemeliharaan instrumen, manajemen proyek, serta peningkatan efisiensi operasional.</p>
+            
+            <!-- Narasi Storytelling Transformasi Profesional -->
+            <div style="margin-top: 1.5rem; padding: 1.25rem; background-color: #f8fafc; border-radius: 8px; border-left: 4px solid var(--primary-light);">
+                <p style="margin-bottom: 0.75rem;"><strong>Catatan Perjalanan & Transformasi Profesional:</strong></p>
+                <p style="margin-bottom: 0.5rem; text-align: justify;">
+                    Setiap tantangan adalah ruang untuk bertumbuh. Perjalanan karier saya sempat diuji melalui masa pemulihan medis yang memerlukan jeda terstruktur (termasuk penanganan pasca insiden kerja dan pemulihan dari kondisi <em>Transverse Myelitis</em>)[span_0](start_span)[span_0](end_span). Alih-alih berhenti, masa-masa tersebut saya jadikan titik balik untuk memperkuat ketajaman mental, memperbarui wawasan teknis secara mandiri, dan merawat disiplin kerja[span_1](start_span)[span_1](end_span).
+                </p>
+                <p style="text-align: justify;">
+                    Untuk mengembalikan performa optimal, mengasah kembali ketajaman analisis, serta memperluas sudut pandang industri, saya memilih untuk aktif berkecimpung dalam berbagai proyek <em>freelance</em> lintas bidang—mulai dari perencanaan konstruksi, pengadaan (procurement), hingga edukasi dan <em>copywriting</em> profesional. Langkah strategis ini berhasil membangun kembali kapasitas kerja, fleksibilitas adaptasi, dan kesiapan mental penuh. Kini, saya telah pulih sepenuhnya dan siap kembali mendedikasikan energi, kompetensi teknik, serta komitmen tinggi untuk kembali berkarier dan memberi nilai tambah nyata bagi perusahaan Anda[span_2](start_span)[span_2](end_span).
+                </p>
+            </div>
         </section>
 
         <!-- Keahlian -->
@@ -387,10 +432,10 @@
             <!-- Jeda Karier / Pemulihan Medis 2025 -->
             <div class="experience-item" style="background-color: #f1f5f9; padding: 1.5rem; border-radius: 8px; border-left: 4px solid #64748b;">
                 <h3>Pemulihan Medis & Jeda Karier Profesional</h3>
-                <p class="meta">Mei 2025 - September 2025</p>
+                <p class="meta">Mei 2025 - September 2025[span_3](start_span)[span_3](end_span)</p>
                 <ul>
-                    <li>Menjalani perawatan medis dan pemulihan penuh dari Transverse Myelitis dengan tetap menjaga ketajaman mental dan pembelajaran mandiri.</li>
-                    <li>Telah pulih sepenuhnya dan siap kembali berkontribusi secara optimal dalam lingkungan profesional.</li>
+                    <li>Menjalani perawatan medis dan pemulihan penuh dari Transverse Myelitis dengan tetap menjaga ketajaman mental dan pembelajaran mandiri[span_4](start_span)[span_4](end_span).</li>
+                    <li>Telah pulih sepenuhnya dan siap kembali berkontribusi secara optimal dalam lingkungan profesional[span_5](start_span)[span_5](end_span).</li>
                 </ul>
             </div>
 
@@ -408,6 +453,7 @@
                 </ul>
             </div>
 
+            <!-- Jembatan Transisi & Pengembalian Performa melalui Freelance -->
             <div class="experience-item">
                 <h3>Procurement/Purchasing, Inventory Control, Construction, Construct Design, Graphic Design, Visual & Writer</h3>
                 <p class="meta">Freelance (2025 - 2026)</p>
@@ -415,19 +461,19 @@
                     <video src="exp-free1.mp4" autoplay muted loop playsinline></video>
                 </div>
                 <ul>
+                    <li>Berperan aktif dalam proyek <em>freelance</em> sebagai wadah akselerasi untuk mengembalikan performa kerja penuh, mengasah ketajaman analisis, dan memperluas wawasan lintas industri pasca pemulihan medis.</li>
                     <li>Mengelola pengadaan/purchasing material, kontrol inventaris, serta perencanaan perusahaan private bahan baku, produksi, dan konstruksi.</li>
-                    <li>Membuat gambar teknik interior/eksterior, denah, dan estimasi anggaran konstruksi skala kecil.</li>
-                    <li>Merancang identitas merek, logo, dan poster digital pemasaran untuk klien.</li>
+                    <li>Membuat gambar teknik interior/eksterior, denah, estimasi anggaran konstruksi, serta merancang identitas merek dan konten edukatif untuk klien.</li>
                 </ul>
             </div>
 
             <!-- Jeda Karier / Pemulihan Cedera 2021 -->
             <div class="experience-item" style="background-color: #f1f5f9; padding: 1.5rem; border-radius: 8px; border-left: 4px solid #64748b;">
                 <h3>Pemulihan Cedera Terkait Pekerjaan & Jeda Karier</h3>
-                <p class="meta">Juli 2021 - Oktober 2021 / Periode Transisi</p>
+                <p class="meta">Juli 2021 - Oktober 2021 / Periode Transisi[span_6](start_span)[span_6](end_span)</p>
                 <ul>
-                    <li>Mengambil masa rehat terstruktur untuk pemulihan total pasca insiden kerja di lapangan.</li>
-                    <li>Menjaga kesiapan profesional melalui pembelajaran mandiri dan pembaruan keahlian teknis hingga pulih sepenuhnya.</li>
+                    <li>Mengambil masa rehat terstruktur untuk pemulihan total pasca insiden kerja di lapangan[span_7](start_span)[span_7](end_span).</li>
+                    <li>Menjaga kesiapan profesional melalui pembelajaran mandiri dan pembaruan keahlian teknis hingga pulih sepenuhnya[span_8](start_span)[span_8](end_span).</li>
                 </ul>
             </div>
         </section>
@@ -475,8 +521,13 @@
             <div class="project-item">
                 <h3>Project 04: Professional Copywriting & Knowledge Sharing (Excel Practice & AR&D)</h3>
                 <p class="meta">Jenis Proyek: Educational Content, Professional Copywriting & LinkedIn Publication</p>
-                <div class="project-img-container">
-                    <img src="project4-img.jpeg" alt="Proyek Copywriting Excel & AR&D" class="project-img">
+                <div class="project-img-duo">
+                    <div>
+                        <img src="project4-img1.jpeg" alt="Proyek Copywriting 1" class="project-img">
+                    </div>
+                    <div>
+                        <img src="project4-img2.jpeg" alt="Proyek Copywriting 2" class="project-img">
+                    </div>
                 </div>
                 <ul>
                     <li>Menyusun materi edukasi dan copywriting profesional untuk modul pelatihan praktis seperti "Excel Practice Problems" (Keuangan, Akuntansi, dan Analisis Data).</li>
